@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OFF-FORM | اطلب عرضك</title>
+<meta name="description" content="OFF-FORM — بيت إبداعي مستقل في الرياض. أرسل فكرتك واطلب عرض سعر.">
+<meta name="theme-color" content="#151515">
+<style>
+@font-face{font-family:GA;src:url(fonts/GraphikArabic-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:GA;src:url(fonts/GraphikArabic-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:GA;src:url(fonts/GraphikArabic-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:GAS;src:url(fonts/GraphikArabic-Super.woff2) format("woff2");font-weight:900;font-display:swap}
+:root{--k:#151515;--r:#C51E32;--g:#D8D4CC;--w:#FCFAF5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:GA,system-ui,sans-serif;background:var(--w);color:var(--k);line-height:1.6;-webkit-font-smoothing:antialiased}
+.hero{background:var(--k);color:var(--w);position:relative;overflow:hidden;padding:28px 24px 56px}
+.hero .slash{position:absolute;left:24px;top:-30px;width:70px;height:230px;background:var(--r);transform:skewX(-22deg);opacity:.9}
+.top{display:flex;justify-content:space-between;align-items:center;position:relative}
+.top svg{width:150px;color:var(--w)}
+.meta{font-size:12px;letter-spacing:.16em;direction:ltr;color:var(--g)}
+.hero h1{font-family:GAS,GA;font-weight:900;font-size:clamp(44px,11vw,84px);line-height:1.05;margin-top:56px;position:relative}
+.hero h1 span{color:var(--r)}
+.hero p{position:relative;max-width:520px;margin-top:18px;font-size:18px;color:var(--g)}
+.wrap{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+fieldset{border:0;margin-bottom:34px}
+legend{font-weight:700;font-size:15px;letter-spacing:.02em;display:flex;gap:10px;align-items:center;margin-bottom:14px}
+legend b{font-family:GA;direction:ltr;color:var(--r);font-size:13px}
+label{display:block;font-size:14px;font-weight:500;margin:14px 0 6px}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;font:inherit;font-size:16px;padding:14px 16px;border:2px solid var(--k);background:#fff;border-radius:0;color:var(--k);appearance:none}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--r)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:10px 14px;border:2px solid var(--k);font-size:14px;font-weight:500;cursor:pointer;user-select:none}
+.chips input:checked+span{background:var(--k);color:var(--w)}
+.chips input:focus-visible+span{outline:3px solid var(--r);outline-offset:2px}
+.note{font-size:13px;color:#555;margin-top:8px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.consent input{width:20px;height:20px;margin-top:3px;accent-color:var(--r)}
+button{font:inherit;font-weight:700;font-size:18px;border:0;cursor:pointer;padding:18px 28px;width:100%}
+.primary{background:var(--r);color:var(--w)}
+.primary:hover{background:#a91829}
+.ghost{background:transparent;border:2px solid var(--k);color:var(--k);margin-top:10px}
+.err{color:var(--r);font-size:14px;margin-top:10px;min-height:20px}
+#done{display:none}
+#done h2{font-family:GAS,GA;font-size:40px;line-height:1.15}
+#done h2 span{color:var(--r)}
+#summary{white-space:pre-wrap;background:#fff;border:2px solid var(--k);padding:18px;margin:20px 0;font-size:15px}
+.steps{counter-reset:s;margin:12px 0 22px}
+.steps li{list-style:none;counter-increment:s;padding:8px 0;display:flex;gap:12px}
+.steps li::before{content:"0" counter(s);font-family:GA;direction:ltr;color:var(--r);font-weight:700}
+footer{border-top:2px solid var(--k);margin-top:40px;padding-top:18px;display:flex;justify-content:space-between;font-size:13px}
+footer a{color:var(--k)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="slash"></div>
+  <div class="top"><svg role="img" aria-label="OFF-FORM" xmlns="http://www.w3.org/2000/svg" viewBox="377 653 682 110"><path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 424.589844 688.308594 C 422.269531 688.308594 420.046875 688.792969 417.921875 689.757812 C 415.792969 690.726562 413.941406 692.117188 412.355469 693.933594 C 410.769531 695.75 409.515625 697.855469 408.589844 700.25 C 407.660156 702.648438 407.199219 705.316406 407.199219 708.25 C 407.199219 711.113281 407.660156 713.777344 408.589844 716.25 C 409.515625 718.726562 410.789062 720.871094 412.414062 722.6875 C 414.039062 724.503906 415.890625 725.914062 417.980469 726.917969 C 420.066406 727.925781 422.269531 728.425781 424.589844 728.425781 C 426.90625 728.425781 429.070312 727.925781 431.082031 726.917969 C 433.089844 725.914062 434.867188 724.503906 436.414062 722.6875 C 437.960938 720.871094 439.15625 718.726562 440.007812 716.25 C 440.859375 713.777344 441.285156 711.113281 441.285156 708.25 C 441.285156 705.316406 440.859375 702.648438 440.007812 700.25 C 439.15625 697.855469 437.960938 695.75 436.414062 693.933594 C 434.867188 692.117188 433.089844 690.726562 431.082031 689.757812 C 429.070312 688.792969 426.90625 688.308594 424.589844 688.308594 M 424.242188 665.933594 C 430.734375 665.933594 436.683594 666.976562 442.097656 669.0625 C 447.507812 671.148438 452.222656 674.085938 456.242188 677.875 C 460.257812 681.664062 463.371094 686.125 465.574219 691.265625 C 467.777344 696.40625 468.878906 702.03125 468.878906 708.136719 C 468.878906 714.242188 467.777344 719.902344 465.574219 725.121094 C 463.371094 730.339844 460.257812 734.859375 456.242188 738.6875 C 452.222656 742.511719 447.507812 745.488281 442.097656 747.613281 C 436.683594 749.738281 430.734375 750.804688 424.242188 750.804688 C 417.746094 750.804688 411.792969 749.738281 406.386719 747.613281 C 400.972656 745.488281 396.257812 742.511719 392.238281 738.6875 C 388.21875 734.859375 385.109375 730.359375 382.90625 725.179688 C 380.703125 720 379.601562 714.320312 379.601562 708.136719 C 379.601562 701.953125 380.703125 696.292969 382.90625 691.148438 C 385.109375 686.011719 388.21875 681.566406 392.238281 677.816406 C 396.257812 674.066406 400.972656 671.148438 406.386719 669.0625 C 411.792969 666.976562 417.746094 665.933594 424.242188 665.933594 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 476.414062 667.730469 L 541.808594 667.730469 L 541.808594 688.136719 L 503.3125 688.136719 L 503.3125 702.164062 L 539.371094 702.164062 L 539.371094 722.570312 L 503.3125 722.570312 L 503.3125 749.003906 L 476.414062 749.003906 Z M 476.414062 667.730469 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 549.574219 667.730469 L 614.96875 667.730469 L 614.96875 688.136719 L 576.476562 688.136719 L 576.476562 702.164062 L 612.535156 702.164062 L 612.535156 722.570312 L 576.476562 722.570312 L 576.476562 749.003906 L 549.574219 749.003906 Z M 549.574219 667.730469 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 709.191406 667.730469 L 774.582031 667.730469 L 774.582031 688.136719 L 736.089844 688.136719 L 736.089844 702.164062 L 772.148438 702.164062 L 772.148438 722.570312 L 736.089844 722.570312 L 736.089844 749.003906 L 709.191406 749.003906 Z M 709.191406 667.730469 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 823.28125 688.308594 C 820.960938 688.308594 818.738281 688.792969 816.613281 689.757812 C 814.484375 690.726562 812.632812 692.117188 811.046875 693.933594 C 809.460938 695.75 808.207031 697.855469 807.28125 700.25 C 806.351562 702.648438 805.886719 705.316406 805.886719 708.25 C 805.886719 711.113281 806.351562 713.777344 807.28125 716.25 C 808.207031 718.726562 809.484375 720.871094 811.105469 722.6875 C 812.730469 724.503906 814.585938 725.914062 816.671875 726.917969 C 818.757812 727.925781 820.960938 728.425781 823.28125 728.425781 C 825.597656 728.425781 827.761719 727.925781 829.773438 726.917969 C 831.78125 725.914062 833.558594 724.503906 835.105469 722.6875 C 836.652344 720.871094 837.847656 718.726562 838.699219 716.25 C 839.550781 713.777344 839.976562 711.113281 839.976562 708.25 C 839.976562 705.316406 839.550781 702.648438 838.699219 700.25 C 837.847656 697.855469 836.652344 695.75 835.105469 693.933594 C 833.558594 692.117188 831.78125 690.726562 829.773438 689.757812 C 827.761719 688.792969 825.597656 688.308594 823.28125 688.308594 M 822.933594 665.933594 C 829.425781 665.933594 835.375 666.976562 840.789062 669.0625 C 846.195312 671.148438 850.914062 674.085938 854.933594 677.875 C 858.949219 681.664062 862.0625 686.125 864.265625 691.265625 C 866.46875 696.40625 867.570312 702.03125 867.570312 708.136719 C 867.570312 714.242188 866.46875 719.902344 864.265625 725.121094 C 862.0625 730.339844 858.949219 734.859375 854.933594 738.6875 C 850.914062 742.511719 846.195312 745.488281 840.789062 747.613281 C 835.375 749.738281 829.425781 750.804688 822.933594 750.804688 C 816.4375 750.804688 810.484375 749.738281 805.078125 747.613281 C 799.664062 745.488281 794.949219 742.511719 790.929688 738.6875 C 786.910156 734.859375 783.800781 730.359375 781.597656 725.179688 C 779.394531 720 778.292969 714.320312 778.292969 708.136719 C 778.292969 701.953125 779.394531 696.292969 781.597656 691.148438 C 783.800781 686.011719 786.910156 681.566406 790.929688 677.816406 C 794.949219 674.066406 799.664062 671.148438 805.078125 669.0625 C 810.484375 666.976562 816.4375 665.933594 822.933594 665.933594 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 907.570312 718.28125 L 933.542969 718.28125 L 952.210938 749.003906 L 921.832031 749.003906 Z M 914.414062 707.496094 C 917.347656 707.496094 919.609375 706.628906 921.195312 704.886719 C 922.777344 703.148438 923.570312 700.734375 923.570312 697.640625 C 923.570312 694.628906 922.777344 692.289062 921.195312 690.628906 C 919.609375 688.964844 917.347656 688.132812 914.414062 688.132812 L 902.007812 688.132812 L 902.007812 707.496094 Z M 914.414062 667.726562 C 925.464844 667.726562 934.007812 670.261719 940.035156 675.324219 C 946.066406 680.386719 949.078125 687.554688 949.078125 696.832031 C 949.078125 706.648438 946.066406 714.28125 940.035156 719.730469 C 934.007812 725.179688 925.464844 727.902344 914.414062 727.902344 L 902.007812 727.902344 L 902.007812 749.003906 L 875.105469 749.003906 L 875.105469 667.726562 Z M 914.414062 667.726562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 959.167969 667.730469 L 987.6875 667.730469 L 1007.863281 710.164062 L 1027.921875 667.730469 L 1056.445312 667.730469 L 1056.445312 749.003906 L 1032.90625 749.003906 L 1032.90625 704.484375 L 1016.558594 741.121094 L 999.050781 741.121094 L 982.703125 704.484375 L 982.703125 749.003906 L 959.167969 749.003906 Z M 959.167969 667.730469 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 669.972656 655.613281 L 697.253906 655.613281 L 659.109375 761.121094 L 631.828125 761.121094 Z M 669.972656 655.613281 "/></svg><span class="meta">CREATIVE HOUSE — RIYADH</span></div>
+  <h1>عندك فكرة؟<br><span>نأخذها إلى الافتتاح.</span></h1>
+  <p>بوث، أو مساحة، أو هوية، أو حملة. أخبرنا بالفكرة والموعد، ونعود إليك بتصوّر ومسار واضح.</p>
+</header>
+
+<main class="wrap">
+<form id="f" novalidate>
+  <fieldset>
+    <legend><b>01</b> نوع الطلب</legend>
+    <div class="chips" role="radiogroup">
+      <label><input type="radio" name="type" value="طلب عرض سعر" checked><span>طلب عرض سعر</span></label>
+      <label><input type="radio" name="type" value="استفسار"><span>استفسار</span></label>
+      <label><input type="radio" name="type" value="شراكة"><span>شراكة / وكالة</span></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>02</b> بياناتك</legend>
+    <div class="row">
+      <div><label for="name">الاسم *</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+      <div><label for="org">الجهة / الشركة</label><input type="text" id="org" name="org" autocomplete="organization"></div>
+      <div><label for="phone">رقم الجوال *</label><input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="05XXXXXXXX" required></div>
+      <div><label for="email">البريد الإلكتروني</label><input type="email" id="email" name="email" autocomplete="email"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>03</b> ما الذي تحتاجه؟</legend>
+    <div class="chips">
+      <label><input type="checkbox" name="svc" value="الإخراج الإبداعي والمفاهيم"><span>الإخراج الإبداعي</span></label>
+      <label><input type="checkbox" name="svc" value="الهوية البصرية"><span>هوية بصرية</span></label>
+      <label><input type="checkbox" name="svc" value="الحملات والإخراج الفني"><span>حملة</span></label>
+      <label><input type="checkbox" name="svc" value="تصميم المساحات والديكور"><span>مساحة / متجر</span></label>
+      <label><input type="checkbox" name="svc" value="البوثات والتصنيع"><span>بوث / كشك / كونتر</span></label>
+      <label><input type="checkbox" name="svc" value="التشغيل والإدارة"><span>تشغيل</span></label>
+      <label><input type="checkbox" name="svc" value="الإنتاج الإبداعي"><span>إنتاج وتنفيذ</span></label>
+    </div>
+    <p class="note">اختر كل ما ينطبق. التشغيل يُقدَّم وفق نطاق المشروع المتفق عليه.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>04</b> التفاصيل</legend>
+    <div class="row">
+      <div><label for="when">الموعد المتوقع</label>
+        <select id="when" name="when"><option value="">— اختر —</option><option>خلال أسبوعين</option><option>خلال شهر</option><option>خلال 1–3 أشهر</option><option>بعد 3 أشهر</option><option>غير محدد</option></select></div>
+      <div><label for="city">المدينة / موقع المشروع</label><input type="text" id="city" name="city" placeholder="الرياض"></div>
+      <div><label for="budget">الميزانية التقديرية</label>
+        <select id="budget" name="budget"><option value="">— اختر —</option><option>أقل من 25 ألف ريال</option><option>25 – 75 ألف ريال</option><option>75 – 200 ألف ريال</option><option>أكثر من 200 ألف ريال</option><option>أحتاج توصية</option></select></div>
+      <div><label for="src">كيف عرفتنا؟</label>
+        <select id="src" name="src"><option value="">— اختر —</option><option>Instagram</option><option>LinkedIn</option><option>توصية</option><option>فعالية / معرض</option><option>أخرى</option></select></div>
+    </div>
+    <label for="msg">أخبرنا عن الفكرة *</label>
+    <textarea id="msg" name="msg" placeholder="ما المشروع؟ ما المساحة أو الحجم؟ ماذا تريد أن يشعر به الناس؟" required></textarea>
+  </fieldset>
+
+  <fieldset>
+    <label class="consent"><input type="checkbox" id="ok" required> أوافق على أن تتواصل معي OFF-FORM بخصوص هذا الطلب.</label>
+  </fieldset>
+
+  <button type="submit" class="primary">جهّز طلبي</button>
+  <p class="err" id="err" role="alert"></p>
+</form>
+
+<section id="done" aria-live="polite">
+  <h2>طلبك <span>جاهز.</span></h2>
+  <ol class="steps" id="howto"></ol>
+  <div id="summary"></div>
+  <div id="actions"></div>
+  <button class="ghost" id="back" type="button">تعديل الطلب</button>
+</section>
+
+<footer><span>OFF-FORM © 2026</span><a dir="ltr" href="https://www.instagram.com/offform.sa/">@offform.sa</a></footer>
+</main>
+
+<script>
+/* ===== Contact settings: fill these to enable direct channels ===== */
+const CONFIG = {
+  instagram: "offform.sa",   // Instagram username (always on)
+  whatsapp: "",              // e.g. "9665XXXXXXXX" — international format, no + or spaces
+  email: ""                  // e.g. "hello@offform.sa"
+};
+/* ================================================================== */
+const f=document.getElementById('f'), err=document.getElementById('err');
+function val(n){return (f.elements[n]?.value||'').trim()}
+function build(){
+  const svc=[...f.querySelectorAll('input[name=svc]:checked')].map(i=>i.value);
+  const L=[
+    'طلب جديد — OFF-FORM',
+    'النوع: '+(f.querySelector('input[name=type]:checked')?.value||''),
+    'الاسم: '+val('name'),
+    val('org')&&'الجهة: '+val('org'),
+    'الجوال: '+val('phone'),
+    val('email')&&'البريد: '+val('email'),
+    svc.length&&'الخدمات: '+svc.join('، '),
+    val('when')&&'الموعد: '+val('when'),
+    val('city')&&'الموقع: '+val('city'),
+    val('budget')&&'الميزانية: '+val('budget'),
+    val('src')&&'المصدر: '+val('src'),
+    'SEP',
+    'الفكرة:',
+    val('msg')
+  ];
+  return L.filter(x=>x).map(x=>x==='SEP'?'':x).join('\n');
+}
+function btn(label, cls, fn){const b=document.createElement('button');b.type='button';b.className=cls;b.textContent=label;b.onclick=fn;return b}
+async function copy(t){try{await navigator.clipboard.writeText(t);return true}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}a.remove();return ok}}
+f.addEventListener('submit',e=>{
+  e.preventDefault(); err.textContent='';
+  if(!val('name')||!val('phone')||!val('msg')){err.textContent='الرجاء تعبئة الاسم ورقم الجوال ووصف الفكرة.';return}
+  if(!/^[+0-9\s-]{8,}$/.test(val('phone'))){err.textContent='تأكد من رقم الجوال.';return}
+  if(!document.getElementById('ok').checked){err.textContent='الرجاء الموافقة على التواصل.';return}
+  const text=build();
+  document.getElementById('summary').textContent=text;
+  const acts=document.getElementById('actions'); acts.innerHTML='';
+  const how=document.getElementById('howto'); how.innerHTML='';
+  if(CONFIG.whatsapp){
+    acts.appendChild(btn('أرسل عبر واتساب','primary',()=>location.href='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(text)));
+  }
+  acts.appendChild(btn('انسخ الطلب وأرسله في رسائل Instagram', CONFIG.whatsapp?'ghost':'primary', async()=>{
+    await copy(text); window.open('https://ig.me/m/'+CONFIG.instagram,'_blank');
+  }));
+  if(CONFIG.email){
+    acts.appendChild(btn('أرسل بالبريد','ghost',()=>location.href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent('طلب — '+val('name'))+'&body='+encodeURIComponent(text)));
+  }
+  [CONFIG.whatsapp?'اضغط «أرسل عبر واتساب» وسيُفتح الطلب جاهزًا للإرسال.':'اضغط الزر أدناه: يُنسخ طلبك وتُفتح محادثتنا على Instagram.',
+   CONFIG.whatsapp?'أو انسخه وأرسله في رسائل Instagram.':'الصق الطلب في المحادثة وأرسله.',
+   'نعود إليك خلال يوم عمل.'].forEach(t=>{const li=document.createElement('li');li.textContent=t;how.appendChild(li)});
+  f.style.display='none'; document.getElementById('done').style.display='block'; window.scrollTo({top:document.querySelector('.wrap').offsetTop,behavior:'smooth'});
+});
+document.getElementById('back').onclick=()=>{document.getElementById('done').style.display='none';f.style.display='block'};
+</script>
+</body>
+</html>
